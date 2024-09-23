@@ -25,6 +25,14 @@ resource "aws_vpc" "default" {
     }
 }
 
+terraform {
+  backend "s3" {
+    bucket = "nikhilbucketazure"
+    key = "engazureb03.tfstate"
+    region = "eu-north-1"
+    }
+    }
+
 resource "aws_internet_gateway" "default" {
     vpc_id = "${aws_vpc.default.id}"
 	tags = {
@@ -102,11 +110,11 @@ resource "aws_security_group" "allow_all" {
     }
 }
 
-# data "aws_ami" "my_ami" {
-#      most_recent      = true
-#      #name_regex       = "^mavrick"
-#      owners           = ["721834156908"]
-# }
+ data "aws_ami" "my_ami" {
+      most_recent      = true
+      #name_regex       = "^mavrick"
+      owners           = ["992382576930"]
+ }
 
 
 # resource "aws_instance" "web-1" {
