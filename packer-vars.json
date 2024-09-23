@@ -5,5 +5,6 @@
     "source_ami": "ami-07c8c1b18ca66bb07",
     "instance_type": "t3.micro",
     "vpc_id": "vpc-0074467d2223b3e54",
-    "subnet_id": "subnet-0fffd046f84a4ebde"
+    "subnet_id": "subnet-0fffd046f84a4ebde",
+    "keypair": "centos"
 }
