@@ -6,10 +6,10 @@ provider "aws" {
 }
 
 terraform {
-  required_version = ">= 1.3.14, <= 1.9.5"
+  required_version = ">= 1.3.14, <= 1.9.5" # Updated version constraint
   required_providers {
     aws = {
-      version = "<= 5.0.0" #Forcing which version of plugin needs to be used.
+      version = ">= 3.0.0, <= 5.0.0" # Updated provider version constraint
       source = "hashicorp/aws"
     }
   }
