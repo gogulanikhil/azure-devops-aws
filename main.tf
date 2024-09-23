@@ -6,7 +6,6 @@ provider "aws" {
 }
 
 terraform {
-  required_version = "<= 1.3.14" #Forcing which version of Terraform needs to be used
   required_version = ">= 1.3.14, <= 1.9.5"
   required_providers {
     aws = {
