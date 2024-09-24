@@ -5,15 +5,15 @@ provider "aws" {
     region = "${var.aws_region}"
 }
 
-// terraform {
-//   required_version = ">= 1.3.14, <= 1.9.5" # Updated version constraint
-//   required_providers {
-//     aws = {
-//       version = ">= 3.0.0, <= 5.0.0" # Updated provider version constraint
-//       source = "hashicorp/aws"
-//     }
-//   }
-// }
+terraform {
+  required_version = ">= 1.3.14, <= 1.9.5" # Updated version constraint
+  required_providers {
+    aws = {
+      version = ">= 3.0.0, <= 5.0.0" # Updated provider version constraint
+      source = "hashicorp/aws"
+    }
+  }
+}
 
 resource "aws_vpc" "default" {
     cidr_block = "${var.vpc_cidr}"
@@ -127,13 +127,13 @@ resource "aws_security_group" "allow_all" {
      }
  }
 
- terraform {
-  backend "s3" {
-    bucket = "nikhilbucketazure"
-    key = "engazureb03.tfstate"
-    region = "eu-north-1"
-    }
-}
+//  terraform {
+//   backend "s3" {
+//     bucket = "nikhilbucketazure"
+//     key = "engazureb03.tfstate"
+//     region = "eu-north-1"
+//     }
+// }
 
 ##output "ami_id" {
 #  value = "${data.aws_ami.my_ami.id}"
